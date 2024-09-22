@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6a1c41aaa7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Topic: Microsoft</title>
+</head>
+<body>
+    <ul class="menu">
+        <a href="networking.html"><li class="link">Networking</li></a>
+        <a href="linux.html"><li class="link">Linux</li></a>
+        <a href="microsoft.html"><li class="link">Microsoft</li></a>
+    </ul>
+    <section class="content">
+        <table>
+            <th>Questions</th>
+            <th>Answer</th>
+            <tr>
+                <td class="ask"><h5>Active Directory 001</h5>
+                <p>What is Active Directory?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory</h5>
+                    <p>An Active Directory domain is a collection of objects within a Microsoft Active Directory network.</p>
+                    <p>An object can be a single user, a group or it can be a hardware component, such as a computer or printer.</p>
+                    <p>Each domain holds a database containing object identity information.</p>
+                    <p>The main service in AD is Domain Services (AD DS), which stores directory information and handles the interaction of the user with the domain.</p>
+                    <p>AD DS verifies access when a user signs into a device or attempts to connect to a server over a network.</p>
+                    <p>Domain Services controls which users have access to each resource.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 002</h5>
+                    <p>What services does Active Directory provide to the domain?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory</h5>
+                    <p>1. Authorization and authentication of all users and computers in a domain network. Secures the domain and devices within it.</p>
+                    <p>2. Active Directory provides many functions that allow the creation & management of users, Groups, Computers, Devices and File Shares.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 003</h5>   
+                <p>What are the common objects types are within Active Directory and there use?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory - Objects</h5>
+                    <p><strong>User Accounts</strong>: Required for users to log on to the network and permission assignment</p>
+                    <p><strong>Groups</strong>: Collections of users, computers, or groups, which are created for organizational purposes or for assigning permissions to shared resources.</p>
+                    <p><strong>Computers</strong>: Represent machines that belong to the domain.</p>
+                    <p><strong>OUs</strong>: Containers for organizing other objects in a hierarchical fashion.</p>
+                    <p><strong>Shared Folders</strong>: Pointers to shared folders on a server on the network.</p>
+                    <p><strong>Printers</strong>: Pointers to printers on the network.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 004</h5>
+                <p>What are the Active Directory Services and describe their function?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory - Services</h5>
+                    <p><strong>Active Directory Certificate Services (AD CS)</strong></p>
+                    <p>* Provides customizable services for issuing and managing digital certificates used that employ public key technologies.</p>
+                    <p>* These can be used to encrypt and digitally sign electronic documents and messages.</p>
+                    <p>* These digital certificates can be used for authentication of computer, user, or device accounts on a network.</p>
+                    <p>* Digital certificates are used to provide:</p>
+                    <p>* Confidentiality through encryption</p>
+                    <p>* Integrity through digital signatures</p>
+                    <p>* Authentication with computers, users, or device accounts within a domain</p>
+                    <p><strong>Active Directory Domain Services (AD DS)</strong></p>
+                    <p>* AD DS stores information about user accounts, such as names, passwords, phone numbers, etc...</p>
+                    <p>* It enables authorized users on the same network to access this information.</p>
+                    <p>* It stores information about objects on the network</p>
+                    <p>* Makes this information easy for administrators and users to find and use.</p>
+                    <p>* These objects typically include shared resources such as servers, network shares, printers.</p>
+                    <p><strong>Active Directory Federation Services (AD FS)</strong></p>
+                    <p>* Enables Federated Identity and Access Management by securely sharing digital identities and entitlements rights.</p>
+                    <p>* Extends the ability to use single sign-on functionality within the network to external facing applications.</p>
+                    <p><strong>Active Directory Lightweight Directory Services (AD LDS)</strong></p>
+                    <p>* Is a Lightweight Directory Access Protocol (LDAP) directory service that provides support for directory enabled applications</p>
+                    <p>* Does not need the dependencies and domain restrictions of Active Directory Domain Services (AD DS) Server.</p>
+                    <p><strong>Active Directory Rights Management Services (AD RMS)</strong></p>
+                    <p>* AD RMS allows users and admins via Information Rights Management (IRM) policies to specify access permissions to documents.</p>
+                    <p>* This prevents sensitive information from being accessed, printed, forwarded or copied by unauthorized users.</p>
+                    <p>* Permission for a file are enforced no matter where the information is held, as the permission for the file is within the document.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 005</h5>
+                    <p>In a domain environment, what are cached credentials used for?</p></td>
+                <td class="answer"><h5>Active Directory - Cached Credentials</h5>
+                    <p>The users credentials can be saved in the local cache on computer.</p>
+                    <p>This allows users to log on with domain cached credentials and access local resources of the computer even if the connection to the domain controller is not available.</p>
+                    <p>This is especially useful to remote workers and laptop users that may spend time away from the network, but still need access to there device.</p>
+                    <p>If someone without there credentials cached attempts to logon, its not permitted as it unable to authenticate users away from the network/domain.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 006</h5>
+                    <p>How do you promote a Member Server to Domain Controller for Windows Server 2012 and newer?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory - Promote Server to Domain Controller</h5>
+                    <p><strong>GUI</strong></p>
+                    <p>Install the Active Directory Domain Services Server role from within Server Manager</p>
+                    <p>In Server Manager, Promote this server to a domain controller.  A number of options will be presented:</p>
+                    <p>* Is this a New Forest (Installs a new forest domain)</p>
+                    <p>* Is this a New Child Domain (Installs a new child domain within a forest)</p>
+                    <p>* Is this a New Domain Controller in an existing Domain (Installs a new DC within an existing Domain)</p>
+                    <p>  * Is this a Read-Only Domain Controller (only presented if you are adding a Domain Controller in an already existing Domain, requires at least 1 writable domain controller within the domain).</p>
+                    <p>PowerShell</p>
+                    <p>Install-WindowsFeature AD-Domain-Services</p>
+                    <p>* (This command will extract all required binary files and start the installation procedure for the services)</p>
+                    <p>Import-Module ADDSDeployment</p>
+                    <p>* (This command will install some additional modules to make the process of server promotion smoother)</p>
+                    <p>Install-ADDSDomain</p>
+                    <p>* (Install first domain controller in a child or tree domain)</p>
+                    <p>Install-ADDSDomainController</p>
+                    <p>* (Install additional domain controller in domain)</p>
+                    <p>Install-ADDSForest</p>
+                    <p>* (Install first domain controller in new forest)</p>
+                    <p>Add-ADDSReadOnlyDomainControllerAccount</p>
+                    <p>* (Install read only domain controller, and only configurable if you are adding to an existing domain, requires at least 1 writable domain controller within the domain).</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h3>Active Directory 007</h3>
+                    <p>How would you add a user or computer to a group within Active Directory?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory - Add User or Computer</h5>
+                    <p>Using AD Users &amp; Computers Management Console - Search or browse to the user or computer object</p>
+                    <p>1. Within the user/computer objects, select Member Of tab, then Add.  Search for the Group you would like to add the object to.</p>
+                    <p>Search or browse to the group object:</p>
+                    <p>2. With a Group object, select Members, then Add.  Either, search for the User/Computer object you would like to add, or enter the object manually.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 008</h5>
+                    <p>What containers are you able to place objects into within Active Directory?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Active Directory - Organizational Units</h5>
+                    <p>Organizational Units (OUs)</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 009</h5>
+                    <p>How do you determine your current logon server within Windows?</p>
+                    <p>Which is the most accurate and why?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory - Current Server</h5>
+                    <p>Right click Start button <span class="arrow">&rarr;</span> select RUN <span class="arrow">&rarr;</span> type <strong>%logonserver%</strong></p>
+                    <p>From Command Prompt <span class="arrow">&rarr;</span> <strong>echo %logonserver%</strong></p>
+                    <p>From Command Prompt: gpresult /r | findstr domain.com</p>
+                    <p>From Command Prompt: set or set log or set Logonserver or set | findstr LOGONSERVER*</p>
+                    <p>(any of the above will do, but if they suggest anything other than just 'set', this demonstrates the ability to identify the required information)</p>
+                    <p>From Command Prompt: nltest /sc_query:domain.com</p>
+                    <p>(nltest /sc_query is the most accurate as it queries your last secure channel to a domain controller.)</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 010</h5>
+                    <p>What is the principle of least privilege (POLP) model and how does it apply to Windows' accounts?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory - Principle of Least Privilege</h5>
+                    <p>The principle of least privilege (POLP) is a security practice to limit access to a minimum level but still allow normal functioning.
+                    Accounts should be separated based on access level. (i.e. user account, elevated account, domain admin account).</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 011</h5>
+                    <p>What is the SYSVOL folder and what does it contain?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory - SYSVOL folder</h5>
+                    <p>The <strong>SYSVOL</strong> folder is a shared directory located on a domain controller(s) that contains the domain;s public files.</p>
+                    <p>The files are Group Policiy configuration files, Software installation files and Scripts files.</p>
+                    <p>You can use it to store other files, but it is <strong>not recommended</strong> or supported as we have DFS and Windows Shares for file storage.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 012</h5>
+                    <p>What is DFS?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory - Distributed File System</h5>
+                <p>Client <span class="arrow">&rarr;</span>Server services</p>
+                <p><strong>Distributed File System (DFS)</strong> is used to organize many file shares into a distributed file system.</p>
+                <p>DFS has two components to its service: Location transparency (via the namespace component) and Redundancy (via the file replication component).</p>
+                <p>Together, these components improve data availability in the case of failure or heavy load by allowing shares in the same or multiple different locations to be logically grouped under one folder, the "DFS root". This makes it possible to give users a virtual view of shared folders, where a single path leads to files located on multiple servers.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Active Directory 013</h5>
+                    <p>What is a DFS Folder Target?</p>
+                    <p>Can there be multiple Folder Targets and what is the effect?</p></td>
+                <td class="answer"><h5>Microsoft - Active Directory - DFS Folder Target</h5>
+                    <p>The folder target is where data and content is stored on a server.</p>
+                    <p>A folder target is the Universal Naming Convention (UNC) path of a shared folder or another namespace that is associated with a folder in a namespace.</p>
+                    <p>Yes, there can be multiple folder targets can be associated the folder target and with these additional folder targets, it increases its availability in case of failure of one or more UNC paths and also can provide access to the nearest path based upon the Active Directory Site.</p>
+                    <p>A user who browses to, i.e. \domain-name\Public\Documents is transparently redirected to the shared folder, i.e. \SITE01-SVR-01\Documents or, i.e. \SITE02-SVR-02\Documents, depending on which site the user is currently located in.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Microsoft Exchange 001</h5>
+                    <p>What is an Outlook OST File?</p></td>
+                <td class="answer"><h5>Microsoft - Exchange - OST file</h5>
+                <p><strong>Offline Storage Table file (.ost)</strong></p>
+                <p>The .ost file stores a synchronized cache copy of your mailbox on your local computer.</p>
+                <p>OST file is used with Exchange servers</p>
+                <p>Allows a user to work offline (no connection to exchange server) and will sync changes when it reconnects.</p>
+                <p>Your mailbox data (mail, calendar, contacts, tasks, notes and journal folders).</p>
+                <p>Shared folders of additional mailboxes linked to your Exchange account.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Exchange 002</h5>
+                    <p>What is an Outlook PST File?</p></td>
+                <td class="answer"><h5>Microsoft - Exchange - PST file</h5>
+                    <p><strong>Personal Storage Table (.pst)</strong></p>
+                        <p>It contains your messages and other Outlook items which are stored locally.</p>
+                        <p>Outlook.com or Microsoft 365 accounts utilize the .pst file</p>
+                        <p>Can be used to provide archived and/or back up of your mailbox</p>
+                        <p>It can be stored locally or remotely.</p>
+                        <p>The following is stored in the pst-file:</p>
+                        <ul>
+                            <li>Emails</li>
+                            <li>Calendars</li>
+                            <li>Contacts</li>
+                            <li>Tasks</li>
+                            <li>Notes</li>
+                        </ul></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>File System 001</h5>
+                    <p>What is the advantage of <strong>NTFS</strong> over <strong>FAT32</strong>?</p></td>
+                <td class="answer"><h5>Microsoft - File System - NTFS vs. FAT32</h5>
+                    <p>NTFS was build for better performance, especially when it comes to managing the way files are stored and retrieved.<br>
+                        * NTFS supports encryption<br>
+                        * NTFS supports compression<br>
+                        * NTFS supports improved metadata support.<br>
+                        * NTFS is more robust, secure and has better utilization of hard drive space.<br>
+                        * NTFS is Fault Tolerance an can automatically repair files/folders in the case of power failures or errors. FAT32 maintains two different copies of the FAT in the case of damage.<br>
+                        * NTFS Supports long file name of up to 255 characters<br>
+                        * NTFS support file and folder permissions, while FAT32 only supports folder permissions, does not support file permissions<br>
+                        * NTFS allows Partitions up to 256TB, and single files of 256TB<br>
+                        * FAT32 allows partitions max of 32GB, single files up to 4GB
+                    </p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Group Policy 001</h5>
+                    <p>What is a Group Policy?</p></td>
+                <td class="answer"><h5>Microsoft - Group Policy</h5>
+                    <p>Group Policy is a feature of Microsoft Windows Active Directory that adds additional controls to user and computer accounts.</p>
+                    <p>Group Policies provide centralized management and configuration of computer and user accounts within an Active Directory Domain environment.</p>
+                    <p>Group Policy allows the application of policies to be deployed domain-wide or to an individual set of user and computer accounts.</p>
+                    <p>Organizational Units and Security Groups can all be used to allow policies to only be deployed to the correct set of user and computer accounts.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Group Policy 002</h5>
+                    <p>How do you force a refresh to your group policy on a Windows client?</p></td>
+                <td class="answer"><h5>Microsoft - Group Policy</h5>
+                    <p>Rebooting the device will allow the device to pick updated policies on next boot.</p>
+                    <p>Command prompts<span class="arrow">&rarr;</span>using the following command: <strong>gpupdate /force</strong></p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Group Policy 003</h5>
+                    <p>Name one or more way(s) to display the group policies applied to a given client user and/or computer account?</p></td>
+                <td class="answer"><h5>Microsoft - Group Policy - display applied policies</h5>
+                    <p>Viewing the Group Policy Results within Group Policy Management Tool </p>
+                    <p>Via Command Prompt<span class="arrow">&rarr;</span><strong>gpresult /r</strong></p>
+                    <p>Via PowerShell<span class="arrow">&rarr;</span></strong><strong>Get-GPresultantsetofpolicy</strong></p>
+                    <p>MMC Console using the Result Set Of Policy (RSoP) snap-in in Logging Mode</p>
+                    <p>MMC Console using the Result Set Of Policy (RSoP) snap-in in Planning Mode</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h3>Group Policy 004</h3>
+                <p>Using the tools to displayor output Group Policy setting and configuration of user and/or computer accounts... Can you discuss how they can be used to troubleshoot issues and what functionality they provided?</p></td>
+                <td class="answer"><h5>Microsoft - Group Policy - Explain Results</h5>
+                <p>
+                    <strong>Within Group Policy Management Tool using Group Policy Results</strong><br>
+                    * Provides highest level of details of policies settings that have been applied to the user/computer, operators in Logging mode<br>
+                    * Shows Applied and Denied Policies, GPO Component Status and WMI Filters<br>
+                    <strong>Within Group Policy Management Tool using Group Policy Modelling</strong><br>
+                    * Provides highest level of details of policies that could be applied to the user/computer, operators in Planning mode<br>
+                    * Shows Applied and Denied Policies, GPO Component Status and WMI Filters<br>
+                    * Able to test with loopback settings to simulate results of an actual user/computer account<br>
+                    <strong>MMC Console using the Result Set Of Policy (RSoP) snap-in in Logging Mode</strong><br>
+                    * Provides details of policies settings that have been applied to the user/computer<br>
+                    * Shows Applied and Denied Policies, GPO Component Status and WMI Filters<br>
+                    <strong>MMC Console using the Result Set Of Policy (RSoP) snap-in in Planning Mode</strong><br>
+                    * Provides details of policies settings that could be applied to the user/computer<br>
+                    * Provides the highest level of simulation to test deployments and review deployment results<br>
+                    * Allows to simulate Slow Network Connections, loopback process using replace and merge, Active Directory OU for User and Computer objects, configured User and Computer Security Groups, WMI Filters for Users and Computers and to simulate the outcome against a particular Domain Controller<br>
+                    <strong>Via Command Prompt (gpresult /r)</strong><br>
+                    * Provides names of the policies that been applied and filtered out to the user/computer, operators in Logging mode<br>
+                    * Show the Users and Computer Security Group membership<br>
+                    * Command line switches support the ability to write out to file detailed output of the Policy Settings and Configuration applied<br>
+                    <strong>Via PowerShell cmdlet (Get-GPresultantsetofpolicy)</strong><br>
+                    * Can provide detail report of the policies applied to the user/computer as a XML or HTML file<br>
+                    * Can provide RSoP Planning and Logging Mode reports similar to MMC Console using the RSoP snap-in"
+                </p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Group Policy 005</h5>
+                    <p>In what order are GPOs applied?</p></td>
+                <td class="answer"><h5>Microsoft - Group Policy - Applied Order</h5>
+                    <p>
+                        1. Local Policies<br>
+                        2. Site Group Policy Objects<br>
+                        3. Domain Group Policy Objects<br>
+                        4. OU (organizational unit) Group Policy Objects<br>
+                    </p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Group Policy 006</h5>
+                    <p>What is the order of precedence in group policy</p></td>
+                <td class="answer"><h5>Microsoft - Group Policy - Order of Precedence</h5>
+                <p>Least amount of Precedence: Local Group Policy</p>
+                <p>Group Policy Object Linked to the AD Site</p>
+                <p>Group Policy Object Linked to the AD Domain</p>
+                <p>Most amount of Precedence: Group Policy Object Linked to the OU</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Hyper-V 001</h5>
+                    <p>What is Hyper-V and what benefits can it bring?</p></td>
+                <td class="answer"><h5>Microsoft - Hyper-Visor</h5>
+                    <p>Hyper-V provides hardware virtualization.</p>
+                    <p>Hyper-V lets you run multiple operating systems as virtual machines within Windows. This means that each virtual machine runs on virtualised hardware.</p>
+                    <p>Hyper-V is a native/bare metal hypervisor.</p>
+                    <p>Hyper-V is a hypervisors run directly on the host's hardware to control the hardware and to manage guest operating systems.</p>
+                    <p>Hyper-V lets you create virtual hard drives, virtual switches, and a number of other virtual devices all of which can be added to virtual machines.</p>
+                    <p>(i.e. CPU, memory, networking, usb, display/video, sound, printer & SCSI)</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Hyper-V 002</h5>
+                    <p>How would you create a highly available server using Windows Hyper-V features?</p></td>
+                <td class="answer"><h5>Microsoft - Hyper-V - Virtual Server</h5>
+                    <p>Hyper-V can enable high-availability using Windows Server Failover Cluster Manager.</p>
+                    <p>A typical Hyper-V failover cluster setup consists of 2 or more servers, which share clustered network and clustered storage resources.</p>
+                    <p>Hyper-V enables you to create clustered storage and clustered networking which are an infrastructure requirement for cluster failover manager.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>IP Addressing 001</h5>
+                    <p>Please tell me name of the Windows mechanism that would assign an IP address of 169.254.0.1 & Why?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - IP Addressing - APIPA</h5>
+                    <p>APIPA (Automatic Private IP Addressing) is a feature of Windows DHCP Client.</p>
+                    <p>It enables a computer to automatically assign itself an IP Address when the DHCP Server is not available.</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>IP Addressing  002</h5>
+                    <p>How do you renew your DHCP Lease?</p></td>
+                <td class="answer"><h5>Microsoft - IP Addressing - DHCP Renew</h5>
+                    <p>Reboot the device</p>
+                    <p>Disconnect from the network and reconnect</p>
+                    <p>Command Line: <strong>ipconfig /renew</strong></p>
+                    <p>Command Line: <strong>ipconfig /release</strong><span class="arrow">&rarr;</span><strong>ipconfig /renew</strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>IP Addressing 003</h5>
+                    <p>What command line utilities can you use to do DNS lookups?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - IP Addressing - DNS Lookup</h5>
+                    <p>Command Prompt: nslookup</p>
+                    <p>PowerShell: Resolve-DnsName</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Microsoft System Centre 001</h5>
+                    <p>What is System Centre Configuration Manager (SCCM)?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - SCCM</h5>
+                    <p>
+                        Microsoft System Centre Configuration Manager (SCCM) is a Windows product that enables administrators to manage the deployment and security of devices and applications across an enterprise.
+                        SCCM is part of the Microsoft System Centre management suite.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Microsoft System Centre 002</h5>
+                    <p>What is System Centre Operations Manager (SCOM)?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - SCOM</h5>
+                    <p>
+                        Microsoft System Centre Operations Manager (SCOM) is a cross-platform data centre monitoring system for operating systems and hypervisors. It uses a single interface that shows state, health and performance information of computer systems.
+                        SCOM is part of the Microsoft System Centre systems management suite.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>PowerShell 001</h5>
+                    <p>What is PowerShell?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - PowerShell</h5>
+                    <p>PowerShell is a configuration management and task automation framework from Microsoft.</p>
+                    <p>This is archived by the use of a command-line shell and the associated scripting language.</p>
+                    <p>PowerShell can also provide output for configuration troubleshooting.</p>
+                    <p>PowerShell is NOT a Command Prompt replacement, but most Command Prompt functions can be performed in PowerShell.</p>
+                    <p>PowerShell is seen as a complementary tool to command prompt, while most tasks can be completed in PowerShell.</p>
+                    <p>Legacy operations still require the use of Command Prompt.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>PowerShell 002</h5>
+                    <p>What is the PowerShell command to view printers, disks, partitions?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - PowerShell - View</h5>
+                    <p>Get-Printer</p>
+                    <p>Get-Disk</p>
+                    <p>Get-Partition</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Remote Execution 001</h5>
+                    <p>How would you execute a command on a remote windows host using command prompt?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Remote commands</h5>
+                    <p>
+                        1. psexec<br>
+                        2. winrs (Windows remote Management)<br>
+                        3. WMIC (Windows Management Instrumentation Command)
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Remote Execution 002</h5>
+                    <p>How would you execute a PowerShell command on a remote host?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Remote commands</h5>
+                    <p>
+                        1. Enter-Pssession<br>
+                        2. Invoke-Command
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Troubleshooting 001</h5>
+                    <p>How would you ensure your system(s) is up to date with the current Windows patches?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Update checks</h5>
+                    <p>
+                        1. Setup Log in windows Event Viewer<br>
+                        2. WSUS Reporting on a Windows Update Server or SCCM, (System Centre Configuration Manager)<br>
+                        3. Windows Update utility within Windows Settings > Update & Security<br>
+                        4. View Installed Updates within Program & Features<br>
+                        5. Get-WindowsUpdateLog within PowerShell<br>
+                        6. Get-Hotfix within PowerShell.<br>
+                        7. From Command Prompt systeminfo | find ": KB"
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Troubleshooting 002</h5>
+                    <p>How would you view the registry in Windows?</p>
+                    <p>How do the tools help you manage the local register of the device.</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Troubleshooting - Registry</h5>
+                    <p>One way it can accessed with the Registry Editor tool <strong>regedit</strong></p>
+
+                    <p>Registry Editor (Regedit) is a built-in GUI tool that makes navigation through the register simple.
+                        It also allows the user to create, amend, delete, import and export register keys via this interface</p>
+                        <p><strong>In Command Prompt:</strong><br>
+                        Using the REG.exe command prompt, which supports a number of operators to allow the administrator to support the device: (Query, Add, Delete, Copy, Save, Load, Unload, Restore, Compare, Export, Import, Flags)</p>
+                    <p>
+                        <strong>In PowerShell:</strong><br>
+                        Get-ItemProperty<br>
+                        Set-ItemProperty
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Troubleshooting 003</h5>
+                    <p>What is a Ping command and why is it used?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Troubleshooting - PING</h5>
+                    <p>It determines the network accessibility of an IP address and is used in order to determine and ensure that a host computer which a user is trying to reach is really operating.</p>
+                    <p>Ping is used to troubleshoot Network/Internet connections.</p>
+                    <p>Ping offers two primary objectives which are:</p>
+                    <p>* To check if the host is available.</p>
+                    <p>* To measure how long the response will take.</p>
+                    <p>Can be used to determine other issues within a network like:</p>
+                    <p>* The size of the data packet (MTU) that can be sent from source to destination.</p>
+                    <p>* If packet fragmentation is permitted (Sending jumbo, large or oversized packets, can useful for troubleshooting SAN's (storage area networks), as an example).</p>
+                    <p>* How many hops to the destination (TTL = Time to Live)</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Troubleshooting 004</h5>
+                    <p>What is a Windows profile?</p>
+                    <p>How would you rebuild a Windows profile that became damaged/corrupt?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Troubleshooting - Windows Profile</h5>
+                    <p>Where a user’s data and personalized Windows’ settings are stored.</p>
+                    <p>How would you rebuild a Windows’ profile that became damaged/corrupt?</p>
+                    <p>You can remove the User Profile within System Properties</p>
+                    <p>You can either, rename or delete the user’s profile located within C:\users\username, with log on with an Administrator account.</p>
+                    <p>Use the following to help identify the users SID:</p>
+                    <p>From Command Prompt:</p>
+                    <p>* whoami /user</p>
+                    <p>From PowerShell</p>
+                    <p>* Get-ADUser -Identity '<USERNAME>' | select SID</p>
+                    <p>Rename or delete the SID within the registry located at Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\<PROFILE SID></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Troubleshooting</h5>
+                    <p>What is the Blue Screen of Death (BSOD) and how is it useful?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Blue Screen Of Death (BSOD)</h5>
+                    <p>BSOD is an error screen that pops up on the computer after a system crash or a fatal system error like:</p>
+                    <p>* High CPU processing and usage.</p>
+                    <p>* Memory fault.</p>
+                    <p>* Installation of faulty software or driver</p>
+                    <p>* System out of bounds error</p>
+                    <p>* Excessive temperature issues that could cause hardware malfunction</p>
+                    <p>* any other possible error state</p>
+                    <p>This is displayed when the operating system can no longer operate safely.</p>
+                    <p>However it can be remedied by rebooting the system, which will clear that occurrence of the error.</p>
+                    <p>There is a unique code and description to every error of the Blue Screen of Death.</p>
+                    <p>These can be used to compared with Microsoft's lists of known errors that can help troubleshoot the issue further."</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Troubleshooting</h5>
+                    <p>What is the Windows print spooler? How would you restart the service?"
+                </td>
+                <td class="answer"><h5>Microsoft - Troubleshooting Printer Spooler</h5>
+                    <p>A Windows Service that supports sending print jobs to a printer.</p>
+                    <p>1. Reboot the computer</p>
+                    <p>2. From CLI run net stop spooler | net start spooler</p>
+                    <p>3. Within Services stop and start or restart the Print Spooler service.</p>
+                    <p>4. From PowerShell Stop-Service -Name Spooler | Start-Service -Name Spooler</p></td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Troubleshooting</h5>
+                <p>When a user is missing a file, what do you do?</p>
+            </td>
+                <td class="answer"><h5>Microsoft - Troubleshooting Missing Files</h5>
+                    <p>1. Check the Recycling Bin</p>
+                    <p>2. Make sure they didn’t save it into another folder by check the application. (Usually Open or Save)</p>
+                    <p>3. Search for the file using windows search in an attempt to locate the file</p>
+                    <p>4. Search for the file using command prompt by using the DIR command</p>
+                    <p>5. Search for the file using PowerShell by using the Get-Childitem</p>
+                    <p>6. Restore the previous version with a shadow copy snapshot or backup & recovery software.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Troubleshooting</h5>
+                    <p>Why would a user get a temporary profile in Windows?</p>
+                </td>
+                <td class="answer"><h5>Microsoft Troubleshooting - Windows Profile</h5>
+                    <p>Windows does not know how to locate the user's profile.</p>
+                    <p>Listen for answers regarding:</p>
+                    <p>1. Roaming profiles being inaccessible</p>
+                    <p>2. SID not matching GUID</p>
+                    <p>3. Profile is corrupt</p>
+                    <p>4. Store Location is wrong</p>
+                    <p>5. Local Disk is Full or Low Space</p>
+                    <p>6. Recent Anti-Virus Update</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Windows Server</h5>
+                    <p>What are the features of File Server Resource Manager?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Windows File Server Resource Manager</h5>
+                    <p>Quota Management: Allows management of space used on volume/folder</p>
+                    <p>File Classification Infrastructure: Allows automation of file classification (access control/encryption/expiration) can also be applied manually</p>
+                    <p>File Screening Management: Helps control the file types stores on a volume / folder</p>
+                    <p>Storage Reports: Allows you to analyze data of what’s stored on the disk & how the data is classified</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Windows Server</h5>
+                    <p>What is Shadow Copy?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Shadow Copy</h5>
+                    <p>AKA: Volume Snapshot Service, Volume Shadow Copy Service or VSS</p>
+                    <p>Shadow Copy is a technology included in Microsoft Windows that allows taking manual and automatic backup copies or snapshots of files and volumes.</p>
+                    <p>Shadow Copy is also capable of creating backups or snapshots of computer files or volumes, even when they are in use.</p>
+                    <p>Shadow Copy is able to support a primitive method of file versioning history, by allowing any file to be retrieved as it existed at the time any of the snapshots was made.</p>
+                    <p>Shadow Copy requires either NTFS or the ReFS file system to create and store shadow copies.</p>
+                    <p>Shadow Copy can create copies can be created on local and external (removable or network) drives/volumes for backup and recovery operations.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Windows Server</h5>
+                    <p>How does Shadow Copy operate?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Shadow Copy / Volume Snapshot Service</h5>
+                    <p>
+                        AKA: Volume Snapshot Service, Volume Shadow Copy Service or VSS
+                        Shadow Copy operates at the block level for volumes. This snapshot is a read-only point-in-time copy of the volume. Snapshots allow the creation of consistent backups of a files/volumes, ensuring that the contents do not change and are not locked while the backup is being made. This allows the system to maintain operational during the process.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Windows Server</h5>
+                    <p>What software and services does Shadow Copy support?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Shadow Copy / VSS</h5>
+                    <p>AKA: Volume Snapshot Service, Volume Shadow Copy Service or VSS</p>
+                    <p>Windows software and services that support VSS include:</p>
+                    <p>• Windows Failover Cluster</p>
+                    <p>• Windows Server Backup</p>
+                    <p>• Hyper-V</p>
+                    <p>• Active Directory</p>
+                    <p>• SQL Server</p>
+                    <p>• Exchange Server</p>
+                    <p>• SharePoint</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Windows</h5>
+                    <p>How many Windows 10 Edition are they and how do they differ?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Windows Editions</h5>
+               <h5>Baseline Editions:</h5>
+                    <p>Baseline editions are the only editions available as standalone purchases at retail.</p>
+                    <p>Home: Designed for personal use in PCs, tablets and 2-in-1 PCs.</p>
+                    <p>Professional: All features of Home, but with the additional capabilities that are oriented towards pro/business environments, (i.e. Active Directory, Remote Desktop, BitLocker, Hyper-V, and Windows Defender Device Guard).</p>
+                    <h5>Professional for Workstations:</h5>
+                    <p>Designed for high-end hardware for intensive computing tasks.</p>
+                    <h5>Organisation Editions:</h5>
+                    <p>These editions add features to facilitate centralised control of the OS within an organisation. Purchasing is via a contract with Microsoft.</p>
+                    <p>S: Feature-limited edition of Windows 10, designed primarily for low-end devices in the education market.</p>
+                    <p>Education: It was built off of Enterprise and has a similar feature set, minus the</p>
+                    <p>Pro Education: Contains the mostly same features as Windows 10 Pro with different options disabled by default</p>
+                    <p>Enterprise: Provides all the features of Windows 10 Pro, with additional features to assist with IT-based organizations.</p>
+                    <p>Enterprise LTSC or LTSB: Long-Term Servicing Channel/Branch is a long-term support version of Enterprise released every 2 to 3 years. Each release is supported with security updates for 10 years after its release, and intentionally receive no feature updates.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Windows</h5>
+                    <p>What are Windows native disk encryption options?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Windows Encrypting File System</h5>
+                    <p>Encrypting File System (EFS) for File & Folder Level Encryption</p>
+                    <p>BitLocker for Full Volume Level Encryption</p>
+                    <p>BitLocker To Go for Removable Storage Devices</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="ask"><h5>Windows</h5>
+                    <p>What is the Window's hosts file?</p>
+                </td>
+                <td class="answer"><h5>Microsoft - Window's host file</h5>
+                    <p>A local store for Windows to translate hostnames to IP addresses.</p>
+                    <p>The Hosts file is used by the operating system to map human-friendly hostnames to numerical Internet Protocol (IP) addresses, which identify and locate a host in an IP network.</p>
+                    <p>The Hosts file contains lines of text consisting of an IP address in the first text field followed by one or more host names. i.e. 55.55.55.123 amazon.com www.amazon.com</p>
+                </td>
+            </tr>
+
+        </table>
+    </section>
+	
+<ul class="menu">
+    <a href="networking.html"><li class="link">Networking</li></a>
+    <a href="linux.html"><li class="link">Linux</li></a>
+    <a href="microsoft.html"><li class="link">Microsoft</li></a>
+</ul>
+</body>
+</html>

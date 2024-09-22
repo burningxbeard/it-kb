@@ -1,0 +1,47 @@
+The OSI (Open Systems Interconnection) model is a framework used to understand how different network protocols interact to allow devices to communicate over a network. It has **7 layers**, each responsible for different tasks. Here’s a simple breakdown with key protocols for each layer:
+
+### 1. **Physical Layer** (Layer 1)
+- **What it does**: Handles the physical connection between devices, like cables and electrical signals.
+- **Examples**: Ethernet cables, Wi-Fi radio signals, network interface cards (NICs).
+
+### 2. **Data Link Layer** (Layer 2)
+- **What it does**: Manages how data is formatted for transmission and controls access to the physical medium. It also handles error detection and correction.
+- **Key protocols**: 
+  - **Ethernet** (for wired connections)
+  - **Wi-Fi (IEEE 802.11)** (for wireless connections)
+  - **MAC (Media Access Control)**
+
+### 3. **Network Layer** (Layer 3)
+- **What it does**: Routes data between different networks and handles addressing (IP addresses).
+- **Key protocols**: 
+  - **IP (Internet Protocol)**: The most important for routing packets across networks.
+  - **ICMP (Internet Control Message Protocol)**: Used for error messages (like "ping").
+
+### 4. **Transport Layer** (Layer 4)
+- **What it does**: Ensures reliable data transfer between devices, managing flow control and error recovery.
+- **Key protocols**: 
+  - **TCP (Transmission Control Protocol)**: Reliable, connection-oriented communication (used for web browsing, emails).
+  - **UDP (User Datagram Protocol)**: Faster, but less reliable (used for streaming, online gaming).
+
+### 5. **Session Layer** (Layer 5)
+- **What it does**: Manages sessions between applications, keeping track of open connections and their state.
+- **Key protocols**: 
+  - **NetBIOS**: For establishing sessions on local networks.
+  - **PPTP (Point-to-Point Tunneling Protocol)**: Used in VPNs for establishing secure sessions.
+
+### 6. **Presentation Layer** (Layer 6)
+- **What it does**: Translates data between the application and the network, handling data encryption, compression, and format conversion.
+- **Key protocols**: 
+  - **SSL/TLS (Secure Sockets Layer / Transport Layer Security)**: For encrypting data (used in HTTPS).
+  - **JPEG, GIF**: Data formats for images.
+- ** ASCII, Unicode: For text encoding.
+
+### 7. **Application Layer** (Layer 7)
+- **What it does**: Provides services for network applications, like email, file transfer, and web browsing.
+- **Key protocols**: 
+  - **HTTP/HTTPS (Hypertext Transfer Protocol / Secure)**: For browsing websites.
+  - **SMTP (Simple Mail Transfer Protocol)**: For sending emails.
+  - **FTP (File Transfer Protocol)**: For file transfers.
+  - **DNS (Domain Name System)**: For translating domain names into IP addresses.
+
+Each layer serves a specific function, allowing communication to occur seamlessly between devices on a network. The lower layers handle data transmission, while the higher layers deal with application-level interactions.
